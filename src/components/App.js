@@ -1,12 +1,16 @@
 import React from "react";
 
 class App extends React.Component {
-  state = {};
+  state = {
+    count: 2
+  };
   render() {
     return (
-      <div>
-        <h1>hello world</h1>;<button>Increment</button>
-      </div>
+      // replaces the div
+      <React.Fragment>
+        <h1>hello world</h1>;<span>{this.state.count}</span>
+        <button>Increment</button>
+      </React.Fragment>
     );
   }
 }
